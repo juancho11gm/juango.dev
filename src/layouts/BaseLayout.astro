@@ -1,0 +1,48 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Soundeffect from "../components/SoundEffect.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <Soundeffect />
+  </body>
+</html>
+
+<style>
+  body {
+    background-image: url("/background-1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  main {
+    max-width: 1042px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 2rem;
+    justify-self: center;
+  }
+</style>

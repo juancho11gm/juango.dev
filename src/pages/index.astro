@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Juan González - @juancho11gm"
+  description="Web Engineer at Kinesso. JavaScript and AI enthusiast. Learning everyday about tech and personal growth."
+>
+  <section>
+    <div class="nes-container is-dark with-title">
+      <p class="title">Juan González - @juancho11gm</p>
+      <p>Web Engineer at Kinesso.</p>
+      <p>JavaScript and AI enthusiast.</p>
+      <p>Learning everyday about tech and personal growth.</p>
+    </div>
+  </section>
+  <nav class="home-nav">
+    <a href="/blog" class="nes-btn">Blog</a>
+    <a href="/projects" class="nes-btn">Projects</a>
+    <a href="/about" class="nes-btn">About</a>
+  </nav>
+</BaseLayout>
+
+<style>
+  .home-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
